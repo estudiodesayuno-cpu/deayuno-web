@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Lector | Desayuno</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body class="pagina-lector">
+
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                src="imagenes/logo_2026.png"
+                alt="Desayuno"
+            >
+
+        </a>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Inicio
+        </a>
+
+        <a href="comics.html">
+            Cómics
+        </a>
+
+        <a href="noticias.html">
+            Noticias
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="lector-controles">
+
+        <div class="lector-info">
+
+            <span class="categoria">
+             Lector
+            </span>
+
+        <img
+        id="lector-logo"
+        class="lector-logo"
+        alt="Título del cómic"
+        >
+
+        </div>
+
+
+        <div class="lector-selector">
+
+            <label for="selector-capitulo">
+                Capítulo
+            </label>
+
+            <select id="selector-capitulo">
+            </select>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="barra-lector">
+
+    <a href="comics.html" class="volver-comics">
+        ← Volver a cómics
+    </a>
+
+    <div class="progreso-lector">
+        <div id="barra-progreso"></div>
+    </div>
+
+    <span id="porcentaje-lectura">
+        0%
+    </span>
+
+    <span id="pagina-actual">
+    Página 1 de 1
+    </span>
+
+</div>
+
+
+    <section
+        class="lector-comic"
+        id="lector-comic"
+    >
+    </section>
+
+
+    
+
+<section
+    class="fin-capitulo"
+    id="fin-capitulo"
+>
+
+    <span class="categoria">
+        Fin del capítulo
+    </span>
+
+    <h2 id="fin-titulo">
+        Has terminado este capítulo
+    </h2>
+
+    <div class="fin-capitulo-botones">
+
+        <button
+            id="fin-anterior"
+            class="boton-lector"
+        >
+            ← Capítulo anterior
+        </button>
+
+        <button
+            id="fin-siguiente"
+            class="boton-lector"
+        >
+            Siguiente capítulo →
+        </button>
+
+    </div>
+
+</section> 
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Desayuno
+    </p>
+
+</footer>
+
+
+<script src="comics.js"></script>
+<script src="lector.js"></script>
+
+</body>
+
+</html>
