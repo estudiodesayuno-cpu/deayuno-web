@@ -1917,3 +1917,208 @@ footer {
         cursor: default;
     }
 }
+
+
+/* =========================================
+   BIBLIOTECA DE CÓMICS - MÓVIL
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* Contenedor de las tarjetas */
+
+    .grid-comics {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        width: 100%;
+        gap: 40px;
+
+        padding: 20px 14px 60px;
+        box-sizing: border-box;
+    }
+
+
+    /* Tarjeta */
+
+    .comic-card {
+        width: 100%;
+        max-width: 520px;
+
+        margin: 0 auto;
+
+        overflow: hidden;
+
+        border-radius: 10px;
+
+        background: #171717;
+        color: #ffffff;
+    }
+
+
+    /* Portada */
+
+    .comic-portada-enlace {
+        display: block;
+
+        width: 100%;
+
+        overflow: hidden;
+
+        text-decoration: none;
+    }
+
+
+    .comic-card-portada {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        margin: 0;
+
+        object-fit: cover;
+    }
+
+
+    /* Información */
+
+    .comic-card-contenido {
+        padding: 20px 18px 22px;
+        box-sizing: border-box;
+    }
+
+
+    /* Categoría + estado */
+
+    .comic-card-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 12px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .comic-categoria {
+        color: #ffffff !important;
+
+        font-size: 11px;
+        font-weight: 700;
+
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+
+    .comic-estado {
+        color: #aaaaaa !important;
+
+        font-size: 11px;
+
+        white-space: nowrap;
+    }
+
+
+    /* Título */
+
+    .comic-card h2 {
+        margin: 0 0 10px;
+
+        color: #ffffff !important;
+
+        font-size: 28px;
+        line-height: 1.1;
+    }
+
+
+    /* Descripción */
+
+    .comic-descripcion {
+        margin: 0;
+
+        color: #bcbcbc !important;
+
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+
+    /* Continuar leyendo */
+
+    .comic-continuar {
+        margin-top: 22px;
+        margin-bottom: 12px;
+
+        padding: 14px 15px;
+
+        background:
+            rgba(255, 255, 255, 0.06);
+
+        border-radius: 7px;
+    }
+
+
+    .comic-continuar-etiqueta {
+        font-size: 12px;
+    }
+
+
+    .comic-continuar-posicion {
+        margin-top: 3px;
+
+        font-size: 12px;
+    }
+
+
+    /* Progreso */
+
+    .comic-progreso {
+        height: 5px;
+
+        margin-top: 16px;
+    }
+
+
+    .comic-progreso-texto {
+        margin-top: 7px;
+        margin-bottom: 0;
+
+        font-size: 11px;
+    }
+
+
+    /* Botón */
+
+    .comic-boton {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-height: 50px;
+
+        margin-top: 20px;
+        padding: 12px 18px;
+
+        box-sizing: border-box;
+
+        border-radius: 7px;
+
+        text-align: center;
+
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+
+    /* Evita efecto hover extraño en móvil */
+
+    .comic-boton:hover {
+        transform: none;
+    }
+
+}
