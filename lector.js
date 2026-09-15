@@ -56,6 +56,12 @@ const barraLector =
     document.querySelector(".barra-lector");
 
 
+console.log("LECTOR JS INICIADO");
+console.log("Comic ID:", comicId);
+console.log("Comic encontrado:", comicActual);
+console.log("CDN:", CDN_COMICS);
+
+
 
 /* =========================================
    VARIABLES
