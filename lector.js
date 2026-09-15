@@ -51,11 +51,6 @@ const finAnterior =
 const finSiguiente =
     document.getElementById("fin-siguiente");
 
-const barraLector =
-    document.querySelector(
-        ".barra-lector"
-    );
-
 
 const barraLector =
     document.querySelector(".barra-lector");
