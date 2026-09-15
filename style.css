@@ -1870,3 +1870,50 @@ footer {
     }
 
 }
+
+@media (max-width: 700px) {
+
+    .fin-capitulo {
+        width: 100%;
+        padding: 80px 18px 60px;
+        box-sizing: border-box;
+    }
+
+    .fin-capitulo::before {
+        margin-bottom: 40px;
+    }
+
+    .fin-capitulo h2,
+    #fin-titulo {
+        font-size: 25px;
+        line-height: 1.25;
+        margin: 12px 0 32px;
+    }
+
+    .fin-capitulo-botones {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        width: 100%;
+    }
+
+    .fin-capitulo-botones .boton-lector {
+        width: 100%;
+        min-height: 52px;
+
+        padding: 14px 18px;
+
+        box-sizing: border-box;
+
+        font-size: 15px;
+        font-weight: 600;
+
+        cursor: pointer;
+    }
+
+    .fin-capitulo-botones .boton-lector:disabled {
+        opacity: 0.35;
+        cursor: default;
+    }
+}
