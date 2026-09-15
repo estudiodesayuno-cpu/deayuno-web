@@ -1778,7 +1778,7 @@ footer {
 
 
     .barra-lector.oculta {
-    transform: translateY(-100%);
+    transform: translateY(-110%);
     opacity: 0;
     pointer-events: none;
     }

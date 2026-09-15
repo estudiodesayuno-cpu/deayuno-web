@@ -76,8 +76,7 @@ let temporizadorGuardado = null;
 
 let actualizandoScroll = false;
 
-let ultimoScroll =
-    window.scrollY;
+
 let ultimoScroll =
     window.scrollY;
 
