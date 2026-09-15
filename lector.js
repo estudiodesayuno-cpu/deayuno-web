@@ -57,6 +57,9 @@ const barraLector =
     );
 
 
+const barraLector =
+    document.querySelector(".barra-lector");
+
 
 
 /* =========================================
@@ -75,7 +78,8 @@ let actualizandoScroll = false;
 
 let ultimoScroll =
     window.scrollY;
-
+let ultimoScroll =
+    window.scrollY;
 
 /* =========================================
    INICIAR
@@ -1041,6 +1045,59 @@ window.addEventListener(
 
                     actualizandoScroll =
                         false;
+
+/* =========================================
+   BARRA MÓVIL AUTOMÁTICA
+========================================= */
+
+const scrollActual =
+    window.scrollY;
+
+const diferencia =
+    scrollActual - ultimoScroll;
+
+
+if (
+    window.innerWidth <= 700 &&
+    barraLector
+) {
+
+    /* Bajando */
+
+    if (
+        diferencia > 8 &&
+        scrollActual > 120
+    ) {
+
+        barraLector
+            .classList
+            .add("oculta");
+    }
+
+
+    /* Subiendo */
+
+    if (diferencia < -8) {
+
+        barraLector
+            .classList
+            .remove("oculta");
+    }
+
+
+    /* Cerca del inicio */
+
+    if (scrollActual < 80) {
+
+        barraLector
+            .classList
+            .remove("oculta");
+    }
+}
+
+
+ultimoScroll =
+    scrollActual;
 
                 }
             );
