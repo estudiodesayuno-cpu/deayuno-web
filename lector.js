@@ -1028,15 +1028,17 @@ window.addEventListener(
     "scroll",
     function() {
 
-        /*
-        Actualiza visualmente sin esperar
-        los 250 ms del guardado.
-        */
+        const scrollActual =
+            window.scrollY;
+
+
+        /* =========================================
+           PROGRESO DE LECTURA
+        ========================================= */
 
         if (!actualizandoScroll) {
 
             actualizandoScroll = true;
-
 
             requestAnimationFrame(
                 function() {
@@ -1045,74 +1047,18 @@ window.addEventListener(
 
                     actualizandoScroll =
                         false;
-
-/* =========================================
-   BARRA MÓVIL AUTOMÁTICA
-========================================= */
-
-const scrollActual =
-    window.scrollY;
-
-const diferencia =
-    scrollActual - ultimoScroll;
-
-
-if (
-    window.innerWidth <= 700 &&
-    barraLector
-) {
-
-    /* Bajando */
-
-    if (
-        diferencia > 8 &&
-        scrollActual > 120
-    ) {
-
-        barraLector
-            .classList
-            .add("oculta");
-    }
-
-
-    /* Subiendo */
-
-    if (diferencia < -8) {
-
-        barraLector
-            .classList
-            .remove("oculta");
-    }
-
-
-    /* Cerca del inicio */
-
-    if (scrollActual < 80) {
-
-        barraLector
-            .classList
-            .remove("oculta");
-    }
-}
-
-
-ultimoScroll =
-    scrollActual;
-
                 }
             );
-
         }
 
 
-        /*
-        Guardar lectura con pequeño delay.
-        */
+        /* =========================================
+           GUARDAR POSICIÓN
+        ========================================= */
 
         clearTimeout(
             temporizadorGuardado
         );
-
 
         temporizadorGuardado =
             setTimeout(
@@ -1120,12 +1066,70 @@ ultimoScroll =
                 250
             );
 
+
+        /* =========================================
+           BARRA MÓVIL AUTOMÁTICA
+        ========================================= */
+
+        if (
+            window.innerWidth <= 700 &&
+            barraLector
+        ) {
+
+            /*
+            Si estamos cerca de arriba,
+            siempre mostramos la barra.
+            */
+
+            if (scrollActual < 100) {
+
+                barraLector
+                    .classList
+                    .remove("oculta");
+            }
+
+            /*
+            Estamos bajando.
+            */
+
+            else if (
+                scrollActual >
+                ultimoScroll
+            ) {
+
+                barraLector
+                    .classList
+                    .add("oculta");
+            }
+
+            /*
+            Estamos subiendo.
+            */
+
+            else if (
+                scrollActual <
+                ultimoScroll
+            ) {
+
+                barraLector
+                    .classList
+                    .remove("oculta");
+            }
+        }
+
+
+        /*
+        Guardamos la posición para
+        compararla en el siguiente scroll.
+        */
+
+        ultimoScroll =
+            scrollActual;
     },
     {
         passive: true
     }
 );
-
 
 /* =========================================
    CAMBIO DE TAMAÑO
