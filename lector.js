@@ -1085,6 +1085,10 @@ window.addEventListener(
                 barraLector
                     .classList
                     .remove("oculta");
+                     console.log(
+                    "MOSTRANDO BARRA",
+                     barraLector.className
+                                    );    
             }
 
             /*
@@ -1099,6 +1103,11 @@ window.addEventListener(
                 barraLector
                     .classList
                     .add("oculta");
+
+                    console.log(
+                        "OCULTANDO BARRA",
+                        barraLector.className
+                                );
             }
 
             /*
