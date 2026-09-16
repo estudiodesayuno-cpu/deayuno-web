@@ -305,3 +305,111 @@ if (slides.length > 1) {
     iniciarIntervalo();
 
 }
+
+
+/* =========================
+   SWIPE EN MÓVIL
+========================= */
+
+let touchInicioX = 0;
+let touchInicioY = 0;
+
+let touchFinX = 0;
+let touchFinY = 0;
+
+const distanciaMinimaSwipe = 50;
+
+
+/* CUANDO TOCAMOS EL CARRUSEL */
+
+sliderContenedor.addEventListener(
+    "touchstart",
+    function(event) {
+
+        touchInicioX =
+            event.changedTouches[0].screenX;
+
+        touchInicioY =
+            event.changedTouches[0].screenY;
+
+    },
+    { passive: true }
+);
+
+
+/* CUANDO TERMINAMOS EL MOVIMIENTO */
+
+sliderContenedor.addEventListener(
+    "touchend",
+    function(event) {
+
+        touchFinX =
+            event.changedTouches[0].screenX;
+
+        touchFinY =
+            event.changedTouches[0].screenY;
+
+        detectarSwipe();
+
+    },
+    { passive: true }
+);
+
+
+/* DETECTAR DIRECCIÓN */
+
+function detectarSwipe() {
+
+    const diferenciaX =
+        touchFinX - touchInicioX;
+
+    const diferenciaY =
+        touchFinY - touchInicioY;
+
+
+    /* Ignorar movimientos demasiado pequeños */
+
+    if (
+        Math.abs(diferenciaX) <
+        distanciaMinimaSwipe
+    ) {
+        return;
+    }
+
+
+    /*
+       Si el movimiento vertical es mayor
+       que el horizontal, probablemente
+       el usuario está haciendo scroll.
+    */
+
+    if (
+        Math.abs(diferenciaY) >
+        Math.abs(diferenciaX)
+    ) {
+        return;
+    }
+
+
+    /* Swipe hacia la izquierda */
+
+    if (diferenciaX < 0) {
+
+        siguienteSlide();
+
+        reiniciarIntervalo();
+
+    }
+
+
+    /* Swipe hacia la derecha */
+
+    if (diferenciaX > 0) {
+
+        anteriorSlide();
+
+        reiniciarIntervalo();
+
+    }
+
+}

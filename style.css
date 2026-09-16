@@ -2293,6 +2293,7 @@ footer {
         height: 520px;
         overflow: hidden;
         background: #111;
+        touch-action: pan-y;
     }
 
 
