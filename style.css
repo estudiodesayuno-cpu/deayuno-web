@@ -2443,3 +2443,332 @@ footer {
     }
 
 }
+
+/* =========================================
+   PÁGINA DE ARTÍCULO
+========================================= */
+
+.pagina-articulo {
+    width: 100%;
+    background: #ffffff;
+}
+
+
+/* CABECERA */
+
+.articulo-cabecera {
+    width: 100%;
+
+    padding: 90px 30px 55px;
+
+    box-sizing: border-box;
+}
+
+
+.articulo-cabecera-contenido {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+.articulo-categoria {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #555555;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.articulo-cabecera h1 {
+    max-width: 900px;
+
+    margin: 0;
+
+    color: #111111;
+
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+.articulo-introduccion {
+    max-width: 750px;
+
+    margin: 25px 0 0;
+
+    color: #555555;
+
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+
+.articulo-meta {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* PORTADA */
+
+.articulo-portada {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto 70px;
+
+    padding: 0 30px;
+
+    box-sizing: border-box;
+}
+
+
+.articulo-portada img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 750px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* TEXTO */
+
+.articulo-contenido {
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 0 30px;
+
+    box-sizing: border-box;
+}
+
+
+.articulo-contenido p {
+    margin: 0 0 28px;
+
+    color: #333333;
+
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+
+.articulo-contenido .articulo-destacado {
+    color: #111111;
+
+    font-size: 23px;
+    line-height: 1.6;
+
+    font-weight: 500;
+}
+
+
+.articulo-contenido h2 {
+    margin: 60px 0 22px;
+
+    color: #111111;
+
+    font-size: 34px;
+    line-height: 1.15;
+}
+
+
+/* IMÁGENES DENTRO DE LA NOTICIA */
+
+.articulo-imagen {
+    width: 100%;
+
+    margin: 50px 0;
+}
+
+
+.articulo-imagen img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 8px;
+}
+
+
+.articulo-imagen figcaption {
+    margin-top: 10px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+/* FINAL */
+
+.articulo-final {
+    width: 100%;
+    max-width: 760px;
+
+    margin: 80px auto 0;
+
+    padding: 40px 30px 100px;
+
+    box-sizing: border-box;
+
+    border-top: 1px solid #dddddd;
+}
+
+
+.articulo-volver,
+.articulo-volver:visited {
+    color: #111111;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.articulo-volver:hover {
+    opacity: .65;
+}
+
+/* =========================================
+   ARTÍCULO - MÓVIL
+========================================= */
+
+@media (max-width: 700px) {
+
+    .articulo-cabecera {
+        padding:
+            55px 18px
+            35px;
+    }
+
+
+    .articulo-categoria {
+        margin-bottom: 14px;
+
+        font-size: 11px;
+    }
+
+
+    .articulo-cabecera h1 {
+        font-size: 38px;
+        line-height: 1.05;
+
+        letter-spacing: -1px;
+    }
+
+
+    .articulo-introduccion {
+        margin-top: 18px;
+
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+
+    .articulo-meta {
+        flex-direction: column;
+
+        gap: 5px;
+
+        margin-top: 22px;
+
+        font-size: 12px;
+    }
+
+
+    .articulo-portada {
+        margin-bottom: 45px;
+
+        padding: 0;
+    }
+
+
+    .articulo-portada img {
+        width: 100%;
+
+        border-radius: 0;
+    }
+
+
+    .articulo-contenido {
+        padding: 0 18px;
+    }
+
+
+    .articulo-contenido p {
+        font-size: 16px;
+        line-height: 1.7;
+
+        margin-bottom: 24px;
+    }
+
+
+    .articulo-contenido
+    .articulo-destacado {
+        font-size: 19px;
+        line-height: 1.55;
+    }
+
+
+    .articulo-contenido h2 {
+        margin: 48px 0 18px;
+
+        font-size: 28px;
+    }
+
+
+    .articulo-imagen {
+        width: calc(100% + 36px);
+
+        margin:
+            40px 0
+            40px -18px;
+    }
+
+
+    .articulo-imagen img {
+        border-radius: 0;
+    }
+
+
+    .articulo-imagen figcaption {
+        padding: 0 18px;
+    }
+
+
+    .articulo-final {
+        margin-top: 60px;
+
+        padding:
+            30px 18px
+            70px;
+    }
+
+}
