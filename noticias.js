@@ -10,7 +10,9 @@ const noticias = [
 
         tipo: "imagen",
         media: "imagenes/progreso.jpg",
-        
+
+        destino: "noticia",
+
         enlace: "noticias/noticia-1.html",
         boton: "Leer noticia"
     },
@@ -26,11 +28,13 @@ const noticias = [
 
         tipo: "imagen",
         media: "imagenes/pimpo.png",
-        
-        enlace: "noticias/noticia-2.html",
-        boton: "Leer noticia"
+
+        destino: "comic",
+
+        enlace: "lector.html?comic=comic-1",
+        boton: "Leer cómic"
     },
-    
+
     {
         titulo: "Noticia 3",
         categoria: "Historietas",
@@ -42,11 +46,10 @@ const noticias = [
 
         tipo: "imagen",
         media: "imagenes/pimp.png",
-        
+
+        destino: "noticia",
+
         enlace: "noticias/noticia-3.html",
         boton: "Leer noticia"
-    },
-
+    }
 ];
-
-

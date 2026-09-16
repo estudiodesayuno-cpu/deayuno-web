@@ -2,7 +2,14 @@ const gridNoticias =
     document.getElementById("grid-noticias");
 
 const noticiasOrdenadas = [...noticias]
-    .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+    .filter(noticia =>
+        noticia.destino === "noticia"
+    )
+    .sort(
+        (a, b) =>
+            new Date(b.fecha) -
+            new Date(a.fecha)
+    );
 
 
 function crearPaginaNoticias() {
