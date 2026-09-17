@@ -1,5 +1,5 @@
 const noticias = [
-    {
+    /*{ 
         titulo: "Nuevo proyecto en desarrollo",
         categoria: "Videojuegos",
         fecha: "2026-09-14",
@@ -15,7 +15,9 @@ const noticias = [
 
         enlace: "noticias/noticia-1.html",
         boton: "Leer noticia"
-    },
+
+
+    },*/
 
     {
         titulo: "Pimporra #01",
@@ -35,7 +37,7 @@ const noticias = [
         boton: "Leer cómic"
     },
 
-    {
+    /*{
         titulo: "Noticia 3",
         categoria: "Historietas",
         fecha: "2026-09-14",
@@ -51,5 +53,5 @@ const noticias = [
 
         enlace: "noticias/noticia-3.html",
         boton: "Leer noticia"
-    }
+    }*/
 ];
