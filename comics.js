@@ -35,7 +35,7 @@ const comics = [
                 carpeta:
                     "comic-1/capitulo-1",
 
-                paginas: 15
+                paginas: 17
             },
 
             {
